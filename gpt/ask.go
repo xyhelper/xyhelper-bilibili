@@ -1,7 +1,6 @@
 package gpt
 
 import (
-	"log"
 	"strings"
 	"time"
 
@@ -20,7 +19,7 @@ func AskGPT(ctx g.Ctx, msg string, token string, conversationID string, parentMe
 	)
 	stream, err := cli.GetChatStream(msg, conversationID, parentMessage)
 	if err != nil {
-		log.Fatalf("get chat stream failed: %v\n", err)
+		return "", "", err
 	}
 
 	var answer string
