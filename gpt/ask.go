@@ -40,7 +40,7 @@ func AskGPT(ctx g.Ctx, msg string, token string, conversationID string, parentMe
 	}
 	// 输出换行
 	println()
-	println("conversation_id:", conversation_id)
-	println("parent_message:", parent_message)
+	// println("conversation_id:", conversation_id)
+	// println("parent_message:", parent_message)
 	return
 }

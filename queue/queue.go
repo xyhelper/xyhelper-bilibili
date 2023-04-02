@@ -5,7 +5,6 @@ import (
 	"xyhelper-bilibili/gpt"
 
 	"github.com/gogf/gf/v2/container/gqueue"
-	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/os/gctx"
 	"github.com/gogf/gf/v2/util/gconv"
 )
@@ -30,7 +29,7 @@ func QueueAnswer() {
 	for {
 		if v := Queue.Pop(); v != nil {
 			fmt.Println(" Pop:", v)
-			g.Dump(Talks)
+			// g.Dump(Talks)
 			ask := &Ask{}
 			gconv.Struct(v, ask)
 			ctx := gctx.New()
